@@ -1,8 +1,8 @@
 if [[ $(awk -F= '/^ID/{print $2}' /etc/os-release) == "alpine" ]]; then
-    apk add openconnect
+    sudo apk add openconnect
 fi
 
 if [[ $(awk -F= '/^ID/{print $2}' /etc/os-release) == "debian" ]]; then
-    apt-get update
-    apt-get -y install openconnect
+    sudo apt-get update
+    sudo apt-get -y install openconnect
 fi
